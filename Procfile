@@ -1,1 +1,1 @@
-web: gunicorn crm.wsgi 
+web: gunicorn vicatelweb.wsgi --log-file -
