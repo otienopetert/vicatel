@@ -1,0 +1,90 @@
+{% extends 'customer/main.html '%}
+
+
+
+{% block content %}
+{% load static %}
+
+
+
+
+
+<div class="row">
+	
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
+
+      {% if messages %}
+       {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+       {% endfor %}
+     {% endif %}
+		
+		
+<button class="btn btn-info">
+  <span class="spinner-border spinner-border-sm"></span>
+
+ <strong>
+ Loading..<br>
+Wait Until you get an email , Maximum wait Time is 48 hr</strong> 
+</button><br>
+<div class="spinner-grow text-muted"></div>
+<div class="spinner-grow text-primary"></div>
+<div class="spinner-grow text-success"></div>
+<div class="spinner-grow text-info"></div>
+<div class="spinner-grow text-warning"></div>
+<div class="spinner-grow text-danger"></div>
+<div class="spinner-grow text-secondary"></div>
+<div class="spinner-grow text-dark"></div>
+<div class="spinner-grow text-light"></div>
+
+
+	</div>
+	<div class="col-md-2"></div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

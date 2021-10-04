@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-leg@iahgesvs&%_^x64azz(h+)n$h-#al^d0pa1p)*=)@04xrd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['vicatel.herokuapp.com','127.0.0.1']
 
 
@@ -41,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -55,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'vicatelweb.urls'
+
+
 
 TEMPLATES = [
     {
@@ -127,11 +132,22 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#CRISPY_TEMPLATE_PACK = 'uni_form'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#SMTP Configuration
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'vicateltz@gmail.com'
+EMAIL_HOST_PASSWORD = 'vicatel2021'
 
 
 django_heroku.settings(locals())

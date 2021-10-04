@@ -1,0 +1,94 @@
+{% extends 'customer/main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_field %}
+{% block title %} SignUp {% endblock %} 
+  {% block content %}
+
+<!--<div class="row container-fluid">
+  <div class="col-md-4">
+<form action="" method="post">
+  {% csrf_token %}
+{% crispy form %}
+<input type="submit" name="signup" class="form-control btn btn-lg btn-primary">
+
+</form>
+</div>
+  <div class="col-md-8"></div>
+
+</div>-->
+
+
+
+
+<div class="row">
+
+<div class="col-md-8"><h5 class="text-center">Vicatel Registration Form</h5></div>
+
+<div class="col-md-4"></div>
+
+</div>
+
+
+<form action="{% url 'signup' %}" method="POST">
+  {% csrf_token%}
+
+<div class="container">
+
+  <div class="row">
+
+
+
+  <div class="col-md-4">
+    
+
+    <label for="username">Username*:</label><br>
+    <small class="text-danger">{{form.username.errors}}</small>
+    {% crispy_field form.username %}
+    <label for="first_name">First name</label><br>
+    <small class="text-danger">{{form.first_name.errors}}</small>
+    {% crispy_field form.first_name %}
+    <label for="last_name">Last name</label><br>
+    <small class="text-danger">{{form.last_name.errors}}</small>
+    {% crispy_field form.last_name %}
+    <label for="email">Email address:</label><br>
+    <small class="text-danger">{{form.email.errors}}</small>
+    {% crispy_field form.email %}  
+
+  </div>
+
+
+  <div class="col-md-4">
+
+<label for="pwd">Password*</label><br>
+<small class="text-danger">{{form.password1.errors}}</small>
+    {% crispy_field form.password1 %}
+<label for="pwd">Password confirmation*</label><br>
+<small class="text-danger">{{form.password2.errors}}</small>
+    {% crispy_field form.password2 %}
+    <strong><ul>
+      <li>Your password can’t be too similar to your other personal information.</li>
+      <li>Your password must contain at least 8 characters.</li>
+      <li>Your password can’t be a commonly used password.</li>
+      <li>Your password can’t be entirely numeric.</li>
+    </ul></strong>
+<!--<label class="form-check-label"><br>
+      <input class="form-check-input" type="checkbox"> Remember me
+</label>-->
+    <button type="submit" class="btn btn-primary form-control">Register</button> 
+    <span>Already have an Account <a href="{% url 'signin' %}">SignIn</a></span>
+
+  </div><!--col-md-4-->
+
+
+
+
+
+<div class="col-md-4"></div>
+
+
+</div><!--row-->
+</div><!--container-->
+
+
+  {% endblock %}

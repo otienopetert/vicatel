@@ -1,0 +1,59 @@
+{% extends 'customer/main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %} AboutUs {% endblock %} 
+  
+
+
+
+      {% block content %}
+
+      <div class="container col-xl-10 col-xxl-8 px-4 py-2">
+    <div class="row align-items-center g-lg-2">
+      <!--<div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 mb-3">Vertically centered hero sign-up form</h1>
+        <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      </div>-->
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form class="p-4 p-md-5 border rounded-3 bg-light" action="{% url 'signin' %}" method="POST">
+
+  {% csrf_token %}
+      {% if messages %}
+       {% for message in messages %}
+
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <small class="text-success">{{ message }}</small>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+          
+       {% endfor %}
+     {% endif %}
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="username" name="username">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+            <label for="floatingPassword">Password</label>
+          </div>
+          <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+          <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In</button>
+          <hr class="my-4">
+          <small class="text-muted">Don't have an Account <a href="{% url 'signup' %}">Sign-Up</a></small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer bg-primary text-sm text-center text-white" style="padding:5px;font-style: italic;">
+      <div class="container">
+            <p>&copy;2020,info@vicatel.co.tz</p>
+      </div>
+</div>
+
+      
+      {% endblock %}

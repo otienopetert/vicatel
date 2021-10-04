@@ -1,6 +1,127 @@
 {% extends 'customer/main.html' %}
+{% load static %}
 {% block title %} Home {% endblock %} 
   {% block content %}
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-md-4">
+<div class="container">
+
+
+
+<h5 style="margin-bottom: 0px; " class="shadow-lg container-fluid  rounded bg-primary text-danger"> <marquee behavior="alternate">NEWS &amp;UPCOMING EVENTS</marquee></h5>
+<ol class="list-group list-group-numbered">
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">ACL Certified Data Analyst (ACDA) review Course and Examination:</div>
+      
+    <div class="d-flex align-items-center">
+  <div class="flex-shrink-0">
+    <img src="{% static 'account/images/loogo.jpg' %}" class="img-responsive" height="30px" width="40px">
+  </div>
+  <div class="flex-grow-1 ms-3">
+
+Starts: 14 - 19 October, 2019<br><a href="" class=" btn btn-danger btn-sm rounded-pill">Download Brochure:</a>
+  </div>
+</div>
+
+
+    </div>
+    <span class="badge bg-primary rounded-pill"><a href="#" style="color:white;">Read More</a></span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">ACL 101 Foundation Course (Concepts & Practises):</div>
+         <div class="d-flex align-items-center">
+  <div class="flex-shrink-0">
+    <img src="{% static 'account/images/loogo.jpg' %}" class="img-responsive" height="30px" width="40px">
+  </div>
+  <div class="flex-grow-1 ms-3">
+
+ Starts: 18 - 22 February, 2019
+Download Brochure:<br><a href="" class=" btn btn-danger btn-sm rounded-pill">Download Brochure:</a>
+  </div>
+</div>
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-start">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold">Subheading</div>
+      Cras justo odio
+    </div>
+    <span class="badge bg-primary rounded-pill">14</span>
+  </li>
+</ol>
+
+
+
+
+
+
+</div><!--container-->
+
+
+
+
+    
+
+
+  </div><!--col-md-4-->
+
+  <div class="col-md-8">
+    
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner text-center">
+    <div class="carousel-item active">
+      <img src="{% static 'account/images/carousel5.webp' %}" class="rounded img-responsive" alt="..." height="400px" width="500px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'account/images/carousel1.webp' %}" class="rounded img-responsive" alt="..." height="400px" width="500px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'account/images/carousel4.webp' %}" class="rounded img-responsive" alt="..." height="400px" width="500px">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  </div>
+</div>
 
 
   {% endblock %}

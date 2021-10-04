@@ -1,0 +1,16 @@
+{% extends 'customer/main.html '%}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="col-md-4 offset-md-4 pt-5">
+
+  <h3 class="text-info">Registration Complete.</h3>
+  <p><b>You are now able to  logIn.</b></p>
+  <a class="btn btn-info btn-lg" role="button" href="{% url 'signin' %}">Login</a>
+
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock %}
