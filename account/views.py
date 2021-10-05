@@ -12,6 +12,8 @@ from django.views import View
 from django.contrib import messages
 from django.conf import settings
 from io import BytesIO
+from datetime import datetime
+
 
 # Create your views here.
 def index(request):
@@ -22,6 +24,8 @@ def aboutus(request):
 	form = ExampleForm()
 	context = {'form': form}
 	return render(request,'customer/aboutus.html', context)
+
+
 
 def signup(request):
 	form = createUserForm(request.POST or None)
