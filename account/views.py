@@ -38,7 +38,7 @@ def signup(request):
 			user.save()
 			token = account_activation_token.make_token(user)
 			user_id = urlsafe_base64_encode(force_bytes(user.id))
-			url = 'http://' + 'localhost:8000' + reverse('confirm-email', kwargs={'user_id': user_id, 'token': token})
+			url = 'http://' + 'vicatel.herokuapp.com' + reverse('confirm-email', kwargs={'user_id': user_id, 'token': token})
 			message = get_template('customer/account_activation_email.html').render({'confirm_url': url})
 			#message = render_to_string('customer/account_activation_email.html',{'user': user,'domain': Site.objects.get_current().domain,'uidb64': urlsafe_base64_encode(force_bytes(user.id)),'token': account_activation_token.make_token(user)})
 			mail = EmailMessage('VICTORIA COMPUTERS AND TELECOMS LTD - Account Confirmation mail', message, to=[user.email], from_email=settings.EMAIL_HOST_USER)
